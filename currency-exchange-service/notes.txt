@@ -1,0 +1,37 @@
+
+currenct-convertor-service
+port-8080
+Paths->
+http://localhost:8080/currency-converter/get/config
+http://localhost:8080/currency-converter/rate/USD/to/INR
+http://localhost:8080/currency-converter/convert-feign/100/from/USD/to/INR
+
+currency-exchange-service
+Port->
+http://localhost:8090/currency-exchange/get/config
+http://localhost:8090/currency-exchange/rate/USD/to/INR
+http://localhost:8080/currency-converter/feign-hello
+
+eureka-naming-service
+
+http://localhost:8761/eureka
+
+spring-cloud-config
+
+http://localhost:8888
+
+API Gateway
+http://localhost:8761
+
+
+
+Examples RestFull services
+1)HelloResrController
+
+1) Currency ExchangeService
+
+2) Currency Conversion Service
+
+
+Notes =>
+1) The @PathVariable annotation is used for data passed in the URI (e.g. RESTful web services) while @RequestParam is used to extract the data found in query parameters. These annotations can be mixed together inside the same controller.
